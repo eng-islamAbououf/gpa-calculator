@@ -1,45 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:gpa_calculator/splash_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => 
+  runApp(const GPACalculator());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class GPACalculator extends StatelessWidget {
+  const GPACalculator({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return const MaterialApp(
+      home:SplashScreen(),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return SplashScreen() ;
   }
 }
